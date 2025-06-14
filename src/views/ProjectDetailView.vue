@@ -22,11 +22,8 @@ const newTaskName = ref("")
 
 function addTask() {
   if (project.value && newTaskName.value.trim()) {
-    project.value.tasks.push({
-      id: Date.now().toString(),
-      name: newTaskName.value.trim(),
-    })
-    newTaskName.value = ""
+    projectsStore.addTask(project.value.id, newTaskName.value);
+    newTaskName.value = "";
   }
 }
 

@@ -48,5 +48,19 @@ export const useProjectsStore = defineStore("projects", () => {
     });
   }
 
-  return { projects, addProject };
+  function addTask(projectId: string, taskName: string) {
+  if (!taskName.trim()) {
+    throw new Error("Task name cannot be empty");
+  }
+  const project = projects.value.find((p) => p.id === projectId);
+  if (!project) {
+    throw new Error("Project not found");
+  }
+  project.tasks.push({
+    id: Date.now().toString(),
+    name: taskName.trim(),
+  });
+}
+
+return { projects, addProject, addTask };
 });
