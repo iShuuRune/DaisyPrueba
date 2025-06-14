@@ -79,11 +79,11 @@ function progressPercent(project: { tasks: any[] }) {
   </FloattingButtom>
 
   <ReusableModal ref="modalRef">
-    <template #title> Agregar usuario </template>
+    <template #title> Agregar Proyecto </template>
 
     <template #content>
       <div class="form-control mb-4">
-        <label class="label">Projecto</label>
+        <label class="label">Proyecto</label>
         <input
           @keyup.enter="addProject"
           v-model="projectName"
