@@ -13,8 +13,6 @@ import { RouterLink } from 'vue-router'
 
     <nav class="ml-auto space-x-4 flex items-center h-10 sm:space-x-6">
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink :to="{ name: 'features' }">Features</RouterLink>
-      <RouterLink to="/pricing">Pricing</RouterLink>
     </nav>
     
     </div>

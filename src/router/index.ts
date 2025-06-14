@@ -19,16 +19,6 @@ const router = createRouter({
         name: 'project-detail',
         component: () => import('@/views/ProjectDetailView.vue'),
         },
-        {
-          path: '/features',
-          name: 'features',
-          component: () => import('../views/FeaturesView.vue'),
-        },
-        {
-          path: '/pricing',
-          name: 'pricing',
-          component: () => import('../views/CardView.vue'),
-        },
       ]
     }
   ]
